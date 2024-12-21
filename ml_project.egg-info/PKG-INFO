@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ml-project
+Version: 1
+Author: Shaik Mohammad Huzaifa
+Author-email: Mohammadhuzaifa342a@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
