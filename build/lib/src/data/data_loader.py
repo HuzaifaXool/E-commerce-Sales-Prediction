@@ -10,7 +10,7 @@ def load_data(file_path:str):
 
 def data_summary(data):
     print("\nData Summary of the dataset is as follows\n")
-    print("="*60)
+    print("="*60+"\n")
     print(f"The data set consists of\n\nrows-->{data.shape[0]} columns-->{data.shape[1]}\n\n")
     print("\nDataTypes are:\n")
     print(data.dtypes)
@@ -74,8 +74,10 @@ def date_cols(data):
     data['Day']=data['Date'].dt.day
     return data
 
-def per_unit_price(data):
-    data['unit_price']=round(data['Price']/data['Units_Sold'])
+def feature_engineering(data):
+    data['Revenue']=round(data['Price']*data['Units_Sold'])
+    data['ROI']=(data['Revenue']-data['Marketing_Spend'])/data['Marketing_Spend']
+
     print(f"Modified data set consists of\n\nrows-->{data.shape[0]} columns-->{data.shape[1]}\n\n")
     return data
 
@@ -94,7 +96,7 @@ data=missing_values(data)
 data=del_duplicates(data)
 data=handling_outliers(data)
 data=date_cols(data)
-data=per_unit_price(data)
+data=feature_engineering(data)
 
 data.to_csv(output_path,index=False)
 

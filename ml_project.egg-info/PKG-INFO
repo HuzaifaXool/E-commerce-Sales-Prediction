@@ -7,3 +7,6 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: matplotlib
 Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: squarify
+Requires-Dist: plotly
