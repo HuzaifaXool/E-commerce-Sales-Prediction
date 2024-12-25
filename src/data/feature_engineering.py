@@ -33,17 +33,22 @@ def non_ordinal_data(data):
     data=data.drop(columns=['Product_Category'],axis=1)
     return data
 
-
-
+def scalling_cols(data):
+    cols=['Price','Marketing_Spend','Discount']
+    for i in cols:
+        data[i]=Ss.fit_transform(data[[i]])
+    return data
 
 data=remove_cols(data)
 data=ordinal_data(data)
 data=non_ordinal_data(data)
+data=scalling_cols(data)
 
 dir_path = 'processed_data/feature_engineered_data'
 
 if not os.path.exists(dir_path):
     os.makedirs(dir_path)
+
 
 file_name = "feature_engineered_data.csv"
 file_path = os.path.join(dir_path, file_name)
