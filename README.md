@@ -59,3 +59,14 @@ This is a machine learning project designed to predict e-commerce sales using hi
 - Completed data processing steps, including handling missing values and outliers.
 - Developed the data summary script (`dataloader.py`) for summarizing key statistics and properties of the dataset.
 - Refined the virtual environment configuration to ensure smooth execution and portability across different systems.
+
+### [2024-12-22] 
+   - Started feature engineering:
+      - Identified columns for removal (e.g., `Date`).  
+      - Planned encoding methods for categorical data (`Customer_Segment`, etc.). 
+
+### [2024-12-23] 
+   - Completed feature engineering:
+      - Removed unnecessary columns like `Date`.    
+      - Scaled numerical columns like `Price` and `Marketing_Spend` and etc.  
+   - Made minor updates to scripts (`dataloader.py` and others) for consistency and better performance.    
