@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder,LabelEncoder,StandardScaler
 
-
-
 le=LabelEncoder()
 Oe=OneHotEncoder(sparse_output=False)
 Ss=StandardScaler()
@@ -12,12 +10,6 @@ Ss=StandardScaler()
 df="processed_data/cleaned_data.csv"
 
 data=pd.read_csv(df)
-
-def remove_cols(data):
-    data=data.drop(columns=['Month','Day','year'])
-    print(data.head())
-    return data
-
 
 def ordinal_data(data):
     customer_order = ['Occasional', 'Regular', 'Premium']
@@ -39,10 +31,16 @@ def scalling_cols(data):
         data[i]=Ss.fit_transform(data[[i]])
     return data
 
-data=remove_cols(data)
+def data_processing(data):
+    cols_to_drop=['Revenue','ROI','Date']
+    for i in cols_to_drop:
+        data.drop(columns=[i],inplace=True)
+    return data
+
 data=ordinal_data(data)
 data=non_ordinal_data(data)
 data=scalling_cols(data)
+data=data_processing(data)
 
 dir_path = 'processed_data/feature_engineered_data'
 
@@ -56,7 +54,4 @@ file_path = os.path.join(dir_path, file_name)
 data.to_csv(file_path, index=False, encoding='utf-8')
 
 print(f"File saved at: {file_path}")
-
-
-
 
