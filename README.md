@@ -70,6 +70,8 @@ This is a machine learning project designed to predict e-commerce sales using hi
 - Extending the dataset to improve model performance.
 - Optimizing the feature engineering process.
 
+
+``` bash
 E-commerce-Sales/House-price-prediction
 ├── build
 │   ├── bdist.linux-x86_64
@@ -163,4 +165,4 @@ E-commerce-Sales/House-price-prediction
     ├── Revenue_Distribution_by_Product_Category_and_Customer_Segment.png # Revenue insights
     ├── Total_Sales_of_Products_by_Category.png  # Total sales for different product categories
     └── Yearly_Sales_by_Product_Category.png   # Yearly sales distribution by category
-
+```
