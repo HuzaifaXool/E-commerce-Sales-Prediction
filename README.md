@@ -11,62 +11,61 @@ This is a machine learning project designed to predict e-commerce sales using hi
 
 ## Setup Instructions
 
-1. Clone this repository:
+1. **Clone this repository:**
     ```bash
     git clone https://github.com/HuzaifaXool/Ecommerce-Prediction.git
     ```
 
-2. Navigate to the project folder:
+2. **Navigate to the project folder:**
     ```bash
     cd Ecommerce-Prediction
     ```
 
-3. Create a virtual environment:
+3. **Create a virtual environment:**
     ```bash
-    conda create --name venv 
+    conda create --name venv
     ```
 
-4. Activate the environment(as i have developed this whole project using linux):
+4. **Activate the environment (as this project was developed using Linux):**
     - On macOS/Linux:
       ```bash
       source venv/bin/activate
       ```
 
-    - On Windows :
+    - On Windows:
       ```bash
       .\venv\Scripts\activate
       ```
 
-5. Install required libraries:
+5. **Install required libraries:**
     ```bash
     python3 setup.py install
     ```
 
+6. **Running the main program**:
+    After completing the setup, you can execute the main program and generate sales predictions by running the following command:
+    ```bash
+    python main.py
+    ```
 
+    - `main.py`: This script contains the code to load the data, preprocess it, and train the machine learning models.
 
-## Daily Updates
+## Description of Processes and Files
 
-### [2024-12-19]
-- Downloaded the dataset from [Kaggle - E-commerce Sales Prediction](https://www.kaggle.com/datasets/nevildhinoja/e-commerce-sales-prediction-dataset/data).
-- Conducted an initial exploration of the dataset to understand key features and factors affecting e-commerce sales.
+### Data Processing
+- The dataset is loaded and cleaned by `dataloader.py`.
+- It handles missing values, outliers, and summarization of key statistics.
 
-### [2024-12-20]
-- Set up the project repository and initialized the virtual environment for managing dependencies.
-- Defined the project’s folder structure to ensure an organized codebase.
-- Started working on the data loading script (`dataloader.py`) to read and load the dataset efficiently into the system.
+### Feature Engineering
+- Identified and removed unnecessary columns such as `Date`.
+- Encoded categorical variables like `Customer_Segment`.
+- Scaled numerical features like `Price` and `Marketing_Spend`.
 
-### [2024-12-21]
-- Completed data processing steps, including handling missing values and outliers.
-- Developed the data summary script (`dataloader.py`) for summarizing key statistics and properties of the dataset.
-- Refined the virtual environment configuration to ensure smooth execution and portability across different systems.
+### Model Development
+- Various machine learning models have been explored (e.g., Linear Regression, Random Forest).
+- The models are trained using the preprocessed data, and performance is evaluated based on sales prediction accuracy.
 
-### [2024-12-22] 
-   - Started feature engineering:
-      - Identified columns for removal (e.g., `Date`).  
-      - Planned encoding methods for categorical data (`Customer_Segment`, etc.). 
-
-### [2024-12-23] 
-   - Completed feature engineering:
-      - Removed unnecessary columns like `Date`.    
-      - Scaled numerical columns like `Price` and `Marketing_Spend` and etc.  
-   - Made minor updates to scripts (`dataloader.py` and others) for consistency and better performance.    
+### Future Work
+- Experimenting with hyperparameter tuning.
+- Extending the dataset to improve model performance.
+- Optimizing the feature engineering process.
