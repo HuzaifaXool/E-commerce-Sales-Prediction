@@ -33,13 +33,15 @@ def generate_visualizations():
     sns.histplot(data['Units_Sold'], kde=True, color='g', bins=12)
     plt.grid(True, alpha=0.12, color='red')
     plt.title('Distribution of Units Sold')
+    plt.show()
     save_plot(plt, "Distribution_of_Units_Sold.png", viz_dir)
-    plt.clf() # Clear figure after saving
+    plt.clf() 
 
     # Distribution of Discount
     plt.figure(figsize=(10, 6))
     sns.histplot(data['Discount'], kde=True, color='r', bins=12)
     plt.title('Distribution of Discount')
+    plt.show()
     save_plot(plt, "Distribution_of_Discount.png", viz_dir)
     plt.clf()
 
@@ -49,6 +51,7 @@ def generate_visualizations():
     plt.title('Count of Product Categories Sold')
     plt.xlabel('Product Category')
     plt.ylabel('Frequency')
+    plt.show()
     save_plot(plt, "Count_of_Product_Categories_Sold.png", viz_dir)
     plt.clf()
 
@@ -57,6 +60,7 @@ def generate_visualizations():
     plt.figure(figsize=(10, 6))
     plt.pie(sales_wise_cat['Units_Sold'], labels=sales_wise_cat['Product_Category'], autopct="%1.2f%%", shadow=True)
     plt.title('Total Sales of Products by Category')
+    plt.show()
     save_plot(plt, "Total_Sales_of_Products_by_Category.png", viz_dir)
     plt.clf()
 
@@ -67,6 +71,7 @@ def generate_visualizations():
     plt.figure(figsize=(10, 8))
     sns.heatmap(correlation, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
     plt.title('Correlation of Numerical Values')
+    plt.show()
     save_plot(plt, "Correlation_of_Numerical_Values.png", viz_dir)
     plt.clf()
 
@@ -75,6 +80,7 @@ def generate_visualizations():
     plt.figure(figsize=(15, 6))
     sns.barplot(x='year', y='Units_Sold', hue='Product_Category', data=year_wise_cat_sales, palette='Set2')
     plt.title('Yearly Sales by Product Category')
+    plt.show()
     save_plot(plt, "Yearly_Sales_by_Product_Category.png", viz_dir)
     plt.clf()
 
@@ -86,6 +92,7 @@ def generate_visualizations():
     plt.ylabel('Price')
     plt.xticks(rotation=45)
     plt.tight_layout()
+    plt.show()
     save_plot(plt, "Price_Distribution_by_Product_Category_and_Customer_Segment.png", viz_dir)
     plt.clf()
 
@@ -96,6 +103,7 @@ def generate_visualizations():
     plt.title('Monthly Sales from 2023 to 2025')
     plt.grid(True, alpha=0.3)
     plt.xticks(month_wise_sales['Month'].unique())
+    plt.show()
     save_plot(plt, "Monthly_Sales_from_2023_to_2025.png", viz_dir)
     plt.clf()
 
@@ -106,6 +114,7 @@ def generate_visualizations():
     plt.title('Average Discounts by Product Category')
     plt.xlabel('Average Discount')
     plt.ylabel('Product Category')
+    plt.show()
     save_plot(plt, "Average_Discounts_by_Product_Category.png", viz_dir)
     plt.clf()
 
@@ -114,6 +123,7 @@ def generate_visualizations():
     plt.figure(figsize=(10, 6))
     squarify.plot(sizes=category_marketing['Marketing_Spend'], label=category_marketing['Product_Category'], color=sns.color_palette('Set3'), alpha=0.8)
     plt.title('Marketing Spend Distribution Across Categories')
+    plt.show()
     save_plot(plt, "Marketing_Spend_Distribution.png", viz_dir)
     plt.axis('off')
     plt.clf()
@@ -124,6 +134,7 @@ def generate_visualizations():
     plt.title('Comparison of Unit Price Across Product Categories')
     plt.xlabel('Product Category')
     plt.ylabel('Unit Price')
+    plt.show()
     save_plot(plt, "Comparison_of_Unit_Price_Across_Product_Categories.png", viz_dir)
     plt.clf()
 
@@ -141,6 +152,7 @@ def generate_visualizations():
         plt.text(v, i, f' {v:1.1f}', va='center', fontsize=14)
     plt.grid(True, alpha=0.1, color='navy')
     plt.tight_layout()
+    plt.show()
     save_plot(plt, "Product_Category_ROI_Analysis.png", viz_dir)
     plt.clf()
 
