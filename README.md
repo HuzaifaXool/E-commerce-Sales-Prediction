@@ -69,3 +69,98 @@ This is a machine learning project designed to predict e-commerce sales using hi
 - Experimenting with hyperparameter tuning.
 - Extending the dataset to improve model performance.
 - Optimizing the feature engineering process.
+
+E-commerce-Sales/House-price-prediction
+├── build
+│   ├── bdist.linux-x86_64
+│   └── lib
+│       ├── src
+│       │   ├── data
+│       │   │   ├── data_loader.py         # Loads raw data into the environment
+│       │   │   ├── data_preprocessing.py  # Handles preprocessing tasks like handling nulls
+│       │   │   ├── feature_engineering.py  # Implements feature engineering methods
+│       │   │   └── __init__.py
+│       │   ├── __init__.py
+│       │   ├── main.py                    # Main entry point for executing the project
+│       │   ├── models
+│       │   │   ├── __init__.py
+│       │   │   ├── model_evaluation.py    # Code for evaluating model performance
+│       │   │   └── model.py                # Defines machine learning models
+│       │   └── training
+│       │       ├── callback.py            # Custom training callback for model training
+│       │       ├── __init__.py
+│       │       └── train_pipeline.py      # Implements the training pipeline logic
+│       └── tests
+│           ├── __init__.py
+│           ├── test_data.py              # Test scripts for data processing functions
+│           └── test_model.py             # Test scripts for model evaluation and predictions
+├── data
+│   ├── archive.zip                       # Dataset archive file
+│   ├── Ecommerce_Sales_Prediction_Dataset.csv # Raw e-commerce sales dataset
+│   └── housing_price_dataset.csv         # Raw housing price dataset
+├── dist
+│   ├── ml_project-1-py3.10.egg           # Project package file for Python 3.10
+│   ├── ml_project-1-py3.12.egg           # Project package file for Python 3.12
+│   └── ml_project-1.tar.gz               # Compressed archive for the project package
+├── environment.txt                       # Lists the required environment dependencies
+├── feature_engineered_data.csv           # Dataset after feature engineering steps
+├── joblib
+├── ml_project.egg-info                  # Metadata for the project package
+│   ├── dependency_links.txt
+│   ├── PKG-INFO
+│   ├── requires.txt
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── pkl_files
+│   ├── linear_model.pkl                  # Saved model file for the linear model
+│   ├── onehot_encoder.pkl               # Saved encoder for categorical features
+│   └── scaler.pkl                       # Saved feature scaling transformer
+├── processed_data
+│   ├── cleaned_data.csv                 # Cleaned dataset after preprocessing
+│   ├── feature_engineered_data
+│   │   └── feature_engineered_data.csv  # Data after feature engineering
+│   ├── test.csv                          # Processed test dataset
+│   └── train.csv                         # Processed train dataset
+├── README.md                            # Project description and instructions
+├── requirement.txt                      # Contains the required Python libraries
+├── setup.py                             # Installation script for the project
+├── src
+│   ├── data
+│   │   ├── data_loader.py               # Loads dataset into the Python environment
+│   │   ├── feature_engineering.py       # Defines feature engineering methods
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── main.py                          # Main script to run the project pipeline
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── model_evaluation.py         # Evaluates model performance
+│   │   └── model.py                     # Defines various machine learning models
+│   ├── training
+│   │   ├── callback.py                  # Custom callback during training
+│   │   ├── __init__.py
+│   │   ├── model_traning.ipynb         # Jupyter notebook for model training
+│   │   └── train_pipeline.py            # Code that defines the model training pipeline
+│   └── vizualization
+│       ├── =4.2.0
+│       ├── data_visualization.py        # Code for visualizing the data
+│       ├── Untitled.ipynb
+│       └── Visualization.ipynb          # Jupyter notebook with various visualizations
+├── tests
+│   ├── __init__.py
+│   ├── test_data.py                     # Unit tests for the data processing code
+│   └── test_model.py                    # Unit tests for the model code
+└── visualization_files
+    ├── Average_Discounts_by_Product_Category.png  # Visualization of discount distribution
+    ├── Comparison_of_Unit_Price_Across_Product_Categories.png  # Unit price comparison
+    ├── Correlation_of_Numerical_Values.png # Correlation heatmap for numerical variables
+    ├── Count_of_Product_Categories_Sold.png # Category-wise sales count plot
+    ├── Distribution_of_Discount.png       # Distribution of product discounts
+    ├── Distribution_of_Units_Sold.png     # Distribution of units sold
+    ├── Marketing_Spend_Distribution.png  # Distribution of marketing spend
+    ├── Monthly_Sales_from_2023_to_2025.png # Monthly sales data trend visualization
+    ├── Price_Distribution_by_Product_Category_and_Customer_Segment.png  # Price distribution
+    ├── Product_Category_ROI_Analysis.png  # Return on investment for product categories
+    ├── Revenue_Distribution_by_Product_Category_and_Customer_Segment.png # Revenue insights
+    ├── Total_Sales_of_Products_by_Category.png  # Total sales for different product categories
+    └── Yearly_Sales_by_Product_Category.png   # Yearly sales distribution by category
+
