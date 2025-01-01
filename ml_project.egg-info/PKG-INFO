@@ -10,3 +10,4 @@ Requires-Dist: scikit-learn
 Requires-Dist: seaborn
 Requires-Dist: squarify
 Requires-Dist: plotly
+Requires-Dist: xgboost
