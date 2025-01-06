@@ -1,6 +1,6 @@
-# Machine Learning Project for E-commerce Sales Prediction
+# Machine Learning Project for E-commerce anlysis and House Price Prediction
 
-This is a machine learning project designed to predict e-commerce sales using historical data. The goal is to develop a model that accurately forecasts future sales based on various factors such as price, units sold, and date.
+This is a machine learning project designed for  e-commerce analysis and predict the prices  using housing data. The goal is to develop a model that accurately forecasts future prices  based on various factors.
 
 ## Technologies Used
 - Python 3.x
